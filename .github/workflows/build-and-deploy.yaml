@@ -24,7 +24,8 @@ jobs:
   pipeline:
     uses: wellingtonns/remote-pipeline/.github/workflows/platform-workflow.yaml@devops
     with:
-      STACK_TYPE: "php"
+      STACK_TYPE: "laravel"
+      PHP_VERSION: "8.4"
       CONTEXT_DIR: ./
       KUBERNETES_MANAGER: "kustomize"
       KUBERNETES_MANIFESTS_PATH: apps/${{ github.event.repository.name }}
